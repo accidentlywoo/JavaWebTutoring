@@ -1,6 +1,6 @@
 package com.example.admin.controller;
 
-import com.example.admin.controller.model.SearchParam;
+import com.example.admin.model.SearchParam;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -48,4 +48,5 @@ public class GetController {
         System.out.println(searchParam.getPage());
         return searchParam; // {"accout":null,"email":"abc변경?page=10","page":0}
     }
+
 }
