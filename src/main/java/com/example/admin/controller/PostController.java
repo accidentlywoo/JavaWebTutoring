@@ -20,4 +20,19 @@ public class PostController {
         return searchParam;
     }
 
+    // HTTP PUT/PATCH 메소드
+    // POST메소드와 마찬가지로 Body에 데이터가 들어 있으며, 주로 업데이트에 사용된다.
+    // PUT과 PATCH메소드의 차이점은? 왜 이렇게 메소드가 나눠져있을까? REST API가 무엇일까? 고민해봅시다.
+
+    @PutMapping("/putMethod")
+    public void put(){}
+
+    @PatchMapping("/patchMethod")
+    public void patch(){}
+
+    // HTTP DELETE 메소드
+    // GET 메소드와 마찬가지로 주소에 파라미터가 들어가고, 데이터를 삭제 할 떼 사용한다.
+
+    // REST의 개념 HTTP 프로토콜에 있는 Method를 활용한 아키텍처 스타일이다.
+    // REST 메소드를 이용해 적절한 url을 설계하는 방법들을 알아보자.
 }
