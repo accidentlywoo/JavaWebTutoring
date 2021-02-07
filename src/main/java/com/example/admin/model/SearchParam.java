@@ -1,4 +1,4 @@
-package com.example.admin.controller.model;
+package com.example.admin.model;
 
 public class SearchParam {
     private String account;
