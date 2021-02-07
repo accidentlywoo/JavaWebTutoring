@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,12 +31,27 @@ class UserRepositoryTest extends AdminApplicationTests {
         System.out.println("newUser : "+ newUser);
     }
 
+    @Test
     public void read(){
+        Optional<User> user = userRepository.findById(2L);
 
+        user.ifPresent(i -> {
+            System.out.println("user : "+ i);
+            System.out.println("email : " + i.getEmail());
+        });
     }
 
+    @Test
     public void update(){
+        Optional<User> user = userRepository.findById(3L);
+        user.ifPresent(i -> {
+            i.setAccount("Update");
+            i.setUpdatedAt(LocalDateTime.now());
+            i.setEmail("update@gmail.com");
+            i.setUpdatedBy("updated!!");
 
+            userRepository.save(i);
+        });
     }
 
     public void delete(){}
