@@ -2,7 +2,6 @@ gradle/*
 gradlew
 gradlew.bat
 settings.gradle
-build.gradle
 HELP.md
 .gradle
 build/

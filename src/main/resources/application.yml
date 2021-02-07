@@ -1,0 +1,9 @@
+# spring.datasource.url=jdbc:mysql:jdbc:mysql://localhost:3306/admin?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/admin?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: woo0312!!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  spring.datasource.username=root
+
